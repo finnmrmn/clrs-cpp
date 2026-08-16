@@ -55,18 +55,18 @@ often in a page.
 
 ## 1.2-2
 Values of $n$ where insertion sort beats merge sort:
-$$
+```math
 \begin{aligned}
 && 8n^2 &< 64n\log_2(n), n\in\mathbb{N}\\
 &\iff& n &< 8\log_2(n)\\
 &\iff& n &< \log_2(n^8)\\
 &\implies& n&\in[2,43]\text{ by inspection}
 \end{aligned}
-$$
+```
 
 ## 1.2-3
 Smallest value of $n$ such that $100n^2$ runs faster than $2^n$:
-$$
+```math
 \begin{aligned}
 && 100n^2 &< 2^n, n\in\mathbb{N}\\
 &\iff& (10n)^2 &< 2^n\\
@@ -74,8 +74,7 @@ $$
 &\iff& n &< \frac{(\sqrt{2})^n}{10}\\
 &\implies& n&=15\text{ by inspection}
 \end{aligned}
-$$
-
+```
 
 # Problems
 
