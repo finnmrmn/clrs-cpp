@@ -88,7 +88,7 @@ A minute is $6\cdot10^7\mu s$.\
 A hour is $36\cdot10^8\mu s$.\
 A day is $864\cdot10^8\mu s$.\
 A month is $2628\cdot10^9\mu s$.\
-A year is $3154\cdot10^{10}\mu s$.
+A year is $3154\cdot10^{10}\mu s$.\
 A century is $3154\cdot10^{12}\mu s$.
 
 | | 1 second | 1 minute | 1 hour | 1 day | 1 month | 1 year | 1 Century |
