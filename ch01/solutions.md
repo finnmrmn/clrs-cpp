@@ -108,5 +108,5 @@ Something that really stands out in this table is how $n!$ barely changes
 despite going from 1 second to 1 year of processing time. 
 
 Note that the best time would be constant, but it does not really work in this 
-table, since it would instantly calculate any arbitrarily large $n$ in virtually
-no time at all, assuming we are thinking asymptotically here.
+table, since it would calculate any arbitrarily large $n$ in virtually no time 
+at all, assuming we are thinking asymptotically here.

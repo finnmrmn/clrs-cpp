@@ -7,5 +7,5 @@ exercises and problems.
 - A compiler that supports C23.
 
 ## Acknowledgements
-Generative AI was used to generate feedback for learning purposes or complete
-some trivially tedious tasks.
+Generative AI was used to generate feedback for learning purposes, complete
+some trivially tedious tasks, and learn how to write Markdown files.
