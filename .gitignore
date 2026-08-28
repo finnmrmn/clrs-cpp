@@ -1,5 +1,6 @@
 # Test binary outputs for each chapter
 test
+code
 
 # Prerequisites
 *.d
