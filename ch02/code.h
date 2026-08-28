@@ -11,6 +11,7 @@
 /// @warning Ensure 'start' <= 'end'.
 /// @warning Ensure 'step' divides 'start'.
 /// @warning Ensure 'step' divides 'end'.
+/// @warning Ensure size of 'key' equals 'step'.
 void insertion_sort(
     void *start,
     void *end,
