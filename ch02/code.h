@@ -3,16 +3,16 @@
 #include <memory.h>
 
 /// @brief Sorts an array in place using insertion sort.
-/// @param start Pointer to the start of the array.
-/// @param end Pointer to the end of array (after last element).
-/// @param step Size of the element of every individual element in the array.
-/// @param key Temporary space for the key used in comparisons.
-/// @param compare The caller-provided compare function for sorting. Return true
-/// if compared elements are in order.
-/// @warning Ensure no pointers are nullptr.
-/// @warning Ensure 'start' <= 'end'.
-/// @warning Ensure 'step' holds the non-zero size of array element.
-/// @warning Ensure memory pointed to by 'key' is size of array element.
+/// @param start Pointer to the first element of the array.
+/// @param end Pointer to one past the last element in the array.
+/// @param step Size of each element in bytes.
+/// @param key Scratch memory used for copying and comparing elements.
+/// @param compare The caller-provided compare function for sorting. Returns
+/// false if the elements need swapping.
+/// @warning Ensure all pointers are non-null.
+/// @warning Ensure start <= end.
+/// @warning Ensure step > 0.
+/// @warning Ensure key points to at least step bytes of writable memory.
 void insertion_sort(
     void *start,
     void *end,

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 bool compare(const void *a, const void *b) {
-    return *(const int *)a > *(const int *)b;
+    return *(const int *)a < *(const int *)b;
 }
 
 int main(void) {
