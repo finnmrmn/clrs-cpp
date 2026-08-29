@@ -3,7 +3,7 @@
 #include <vector>
 
 /// @brief Sorts a vector in place using insertion sort.
-/// @note CLRS uses 1-based indexing, which is problematic for C++ 0-based
+/// @note CLRS uses 1-origin indexing, which is problematic for C++ 0-origin
 /// indexing and size_t being non-negative. This shift means j is now the
 /// insertion position rather than the position of what is being compared
 /// against key.
