@@ -11,11 +11,11 @@ void insertion_sort(
     char *e = end;
     for (char *i = s + step; i < e; i += step) {
         memcpy(key, i, step);
-        char *j = i - step;
-        while (j >= s && compare(j, key)) {
-            memcpy(j + step, j, step);
+        char *j = i;
+        while (j > s && compare(j - step, key)) {
+            memcpy(j, j - step, step);
             j -= step;
         }
-        memcpy(j + step, key, step);
+        memcpy(j, key, step);
     }
 }
