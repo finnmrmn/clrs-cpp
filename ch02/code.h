@@ -8,10 +8,9 @@
 /// @param step Size of the element of every individual element in the array.
 /// @param key Temporary space for the key used in comparisons.
 /// @param compare The caller-provided compare function for sorting.
-/// @warning Ensure 'start' <= 'end'.
-/// @warning Ensure 'step' divides 'start'.
-/// @warning Ensure 'step' divides 'end'.
-/// @warning Ensure size of 'key' equals 'step'.
+/// @warning Ensure 'start' is not 'nullptr' and 'start' <= 'end'.
+/// @warning Ensure 'step' holds size of array element.
+/// @warning Ensure memory pointed to by 'key' is size of array element.
 void insertion_sort(
     void *start,
     void *end,
