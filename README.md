@@ -4,7 +4,7 @@ Pseudocode implementations and test code in C of algorithms from
 exercises and problems.
 
 ## Requirements
-- A compiler that supports C23.
+- A C++ compiler.
 
 ## Acknowledgements
 Generative AI was used for learning purposes, like generating feedback, Markdown 
