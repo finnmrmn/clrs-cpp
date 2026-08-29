@@ -6,15 +6,15 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/usr/bin/g++",
             "cStandard": "c23",
+            "cppStandard": "gnu++26",
             "intelliSenseMode": "linux-gcc-x64",
             "compilerArgs": [
-                "-std=c23",
+                "-std=c++26",
                 "-Wall",
                 "-Wextra",
-                "-Wpedantic",
-                "-Werror"
+                "-Wpedantic"
             ]
         }
     ],
