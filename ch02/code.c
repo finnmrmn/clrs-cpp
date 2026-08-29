@@ -12,7 +12,7 @@ void insertion_sort(
     for (char *i = s + step; i < e; i += step) {
         memcpy(key, i, step);
         char *j = i;
-        while (j > s && compare(j - step, key)) {
+        while (j > s && !compare(j - step, key)) {
             memcpy(j, j - step, step);
             j -= step;
         }
