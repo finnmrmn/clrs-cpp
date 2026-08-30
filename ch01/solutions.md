@@ -1,4 +1,4 @@
-# Exercises
+# Exercises 1.1
 
 ## 1.1-1
 I might group items by weight and then stack each group by size, which lets me
@@ -43,6 +43,8 @@ can change when you expect to be able to finish paying them off. Interest rates
 and wages are subject to change (online), which can make it hard to predict when
 the loan will be fully paid. If a loan changes enough, people may switch
 to a different provider.
+
+# Exercises 1.2
 
 ## 1.2-1
 When searching for a word in document or webpage, algorithms to find the word
