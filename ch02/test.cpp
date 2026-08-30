@@ -12,6 +12,8 @@ void test_insertion_sort(std::vector<T> actual, std::vector<T> expected) {
 
 void test_suite_insertion_sort(void) {
     test_insertion_sort<int>({1, 2, 3, 4, 5}, {1, 2, 3, 4, 5});
+    test_insertion_sort<int>({5, 4, 3, 2, 1}, {1, 2, 3, 4, 5});
+    test_insertion_sort<int>({4, 3, 1, 5, 2}, {1, 2, 3, 4, 5});
     test_insertion_sort<int>({}, {});
     test_insertion_sort<int>({1}, {1});
     test_insertion_sort<int>({2, 1}, {1, 2});
