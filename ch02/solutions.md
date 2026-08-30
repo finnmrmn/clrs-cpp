@@ -26,7 +26,8 @@ $$sum_{i} = \sum^{i-1}_{k=1} A[k]$$
 Adding the next element, $A[i]$, to $sum_i$ gives us,
 $$
 sum_i + A[i]
-= \sum^{i}_{k=1} A[k] 
+= \sum^{i-1}_{k=1} A[k] + A[i] 
+=\sum^{i}_{k=1} A[k]
 =\sum^{(i+1)-1}_{k=1} A[k]
 = sum_{i+1}
 $$
