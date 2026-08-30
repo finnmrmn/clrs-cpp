@@ -36,3 +36,16 @@ The loop invariant is maintained and will hold for the next iteration.
 The loop terminates once $i - 1 = n\implies i = n + 1$,
 $$sum_{n+1}=\sum^{(n+1)-1}_{k=1} A[k] =\sum^{n}_{k=1} A[k]$$
 After terminating the loop, we get the sum of $A[1:n]$.
+
+## 2.1-3
+```text
+SUM-ARRAY(A, n)
+    for i = 2 to n
+        key = A[i]
+        j = i - 1
+        while j > 0 and A[j] < key // Changed '>' to '<'.
+            A[j + 1] = A[j]
+            j = j - 1
+        A[j + 1] = key
+```
+The procedure now sorts in monotonically decreasing order.
