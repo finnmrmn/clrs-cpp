@@ -22,7 +22,7 @@ subarray $A[1:i-1]$.
 ### Initialisation
 When $i=1$, we get the empty sum,
 ```math
-sum_1 = \sum^{1-1}_{k=1} A[k] = \sum^{0}_{k=1} A[k] = 0$$
+sum_1 = \sum^{1-1}_{k=1} A[k] = \sum^{0}_{k=1} A[k] = 0
 ```
 ### Maintenance
 Before each loop iteration, we have the loop invariant,
@@ -39,7 +39,7 @@ The loop invariant is maintained and will hold for the next iteration.
 ### Termination
 The loop terminates once $i - 1 = n\implies i = n + 1$,
 ```math
-sum_{n+1}=\sum^{(n+1)-1}_{k=1} A[k] =\sum^{n}_{k=1} A[k]$$
+sum_{n+1}=\sum^{(n+1)-1}_{k=1} A[k] =\sum^{n}_{k=1} A[k]
 ```
 After terminating the loop, we get the sum of $A[1:n]$.
 
