@@ -78,7 +78,7 @@ Smallest value of $n$ such that $100n^2$ runs faster than $2^n$:
 \end{aligned}
 ```
 
-# Problems
+# Problems 1
 
 ## 1.1 Comparison of running times
 
