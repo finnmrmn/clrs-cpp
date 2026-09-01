@@ -102,3 +102,17 @@ The other case is when $x\in A[i]$.
 ```math
 x = A[i] \implies i\text{ is returned.}
 ```
+
+## 2.1-5
+Note that this problem uses 0-origin indexing.
+```text
+ADD-BINARY-INTERGERS(A, B, n)
+    let C[0:n] be a new array
+    carry = 0
+    for i = 0 to n - 1
+        sum = A[i] + B[i] + carry
+        C[i] = sum mod 2
+        carry = sum div 2
+    C[n] = carry
+    return C
+```
