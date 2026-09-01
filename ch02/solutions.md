@@ -94,13 +94,13 @@ invariant on the terminating iteration $i-1=n\implies i=n+1$,
 ```math
 (x\notin A[1:(n+1)-1]) 
 \implies (x\notin A[1:n]) 
-\implies \text{NIL is returned.}
+\implies \text{NIL is returned}
 ```
 When $n+1$ is reached, the loop terminates.
 
 The other case is when $x\in A[i]$.
 ```math
-x = A[i] \implies i\text{ is returned.}
+x = A[i] \implies i\text{ is returned}
 ```
 
 ## 2.1-5
