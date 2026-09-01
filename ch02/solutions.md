@@ -12,6 +12,7 @@
 Numbers belonging to the sorted subarray are in **bold**.
 
 ## 2.1-2
+
 ### Loop Invariant
 Let $sum_i$ denote the value of $sum$ at the start of iteration $i$.
 ```math
@@ -55,3 +56,51 @@ SUM-ARRAY(A, n)
         A[j + 1] = key
 ```
 The procedure now sorts in monotonically decreasing order.
+
+## 2.1-4
+```text
+LINEAR-SEARCH(A, n, x)
+    for i = 1 to n
+        if A[i] == x
+            return i
+    return NIL
+```
+This finds the index of the first $x$ in the array, if at least one $x$ is 
+present. Note that the exercise does not elaborate on how the algorithm should 
+handle multiple occurences of $x$, so we will assume only one may be present or
+that it simply does not matter.
+
+### Loop Invariant
+```math
+x\notin A[1:i-1]
+```
+
+### Initialisation
+Initially, $i = 1$,
+```math
+A[1:(1)-1] = A[1:0]\\
+x \notin A[1:0]
+```
+This is an empty subarray.
+
+### Maintenance
+Consider case $i$,
+```math
+(x\notin A[1:i-1]) \land (x \neq A[i])\\
+ \implies (x\notin A[1:i])
+```
+$x$ is not in the new subarray, so the loop invariant is maintained.
+### Termination
+There are two cases where the loop can terminate. Let us apply the loop 
+invariant for iteration $i=n+1$,
+```math
+(x\notin A[1:(n+1)-1]) 
+\implies (x\notin A[1:n]) 
+\implies \text{NIL is returned.}
+```
+When $n+1$ is reached, the loop terminates.
+
+The other case is when $x\in A[i]$.
+```math
+x = A[i] \implies i\text{ is returned.}
+```
