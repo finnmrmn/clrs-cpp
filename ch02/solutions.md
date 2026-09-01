@@ -90,7 +90,7 @@ Consider case $i$,
 $x$ is not in the new subarray, so the loop invariant is maintained.
 ### Termination
 There are two cases where the loop can terminate. Let us apply the loop 
-invariant for iteration $i=n+1$,
+invariant on the terminating iteration $i-1=n\implies i=n+1$,
 ```math
 (x\notin A[1:(n+1)-1]) 
 \implies (x\notin A[1:n]) 
