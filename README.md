@@ -3,7 +3,7 @@ Pseudocode implementations and test code in C++ of algorithms from
 *Introduction to Algorithms* (CLRS), accompanied by Markdown solutions to 
 exercises and problems.
 
-## How to Use to Follow Along
+## What to Use to Follow Along
 - C++ compiler (version does not really matter).
 - CLRS Introduction to Algorithms 4th Edition.
 
