@@ -116,3 +116,13 @@ ADD-BINARY-INTERGERS(A, B, n)
     C[n] = carry
     return C
 ```
+
+# Exercises 2.2
+
+## 2.2-1
+
+## 2.2-2
+
+## 2.2-3
+
+## 2.2-4
