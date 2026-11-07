@@ -139,7 +139,14 @@ This reveals that the order of growth in $\Theta$-notation is:
 Thus, the expression is roughly proportional to $n^3$ when $n$ is large.
 
 ## 2.2-2
+```text
+SELECTION-SORT(A, n)
+    
+```
 
 ## 2.2-3
 
 ## 2.2-4
+All sorting algorithms could first perform an already-sorted check to determine 
+whether any sorting needs to be performed at all. This would bring the
+best-case running time of any typical sorting algorithm down to $\Theta(n)$.
