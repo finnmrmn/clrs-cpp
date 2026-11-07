@@ -19,14 +19,14 @@ sum_{i} = \sum^{i-1}_{k=1} A[k]
 Note that this sum does not include $A[i]$ itself, so this is the sum of the
 subarray $A[1:i-1]$.
 ### Initialisation
-When $i=1$, we get the empty sum,
+When $i=1$, we get the empty sum:
 ```math
 sum_1 = \sum^{1-1}_{k=1} A[k] = \sum^{0}_{k=1} A[k] = 0
 ```
 ### Maintenance
-Before each loop iteration, we have the loop invariant,
+Before each loop iteration, we have the loop invariant:
 $$sum_{i} = \sum^{i-1}_{k=1} A[k]$$
-Adding the next element, $A[i]$, to $sum_i$ gives us,
+Adding the next element, $A[i]$, to $sum_i$ gives us:
 ```math
 sum_i + A[i]
 = \sum^{i-1}_{k=1} A[k] + A[i] 
@@ -36,7 +36,7 @@ sum_i + A[i]
 ```
 The loop invariant is maintained and will hold for the next iteration.
 ### Termination
-The loop terminates once $i - 1 = n\implies i = n + 1$,
+The loop terminates once $i - 1 = n\implies i = n + 1$, giving us:
 ```math
 sum_{n+1}=\sum^{(n+1)-1}_{k=1} A[k] =\sum^{n}_{k=1} A[k]
 ```
@@ -74,7 +74,7 @@ x\notin A[1:i-1]
 ```
 
 ### Initialisation
-Initially, $i = 1$,
+Initially, $i = 1$:
 ```math
 A[1:(1)-1] = A[1:0]\\
 x \notin A[1:0]
@@ -82,7 +82,7 @@ x \notin A[1:0]
 This is an empty subarray.
 
 ### Maintenance
-Consider case $i$,
+Consider case $i$:
 ```math
 (x\notin A[1:i-1]) \land (x \neq A[i])\\
  \implies (x\notin A[1:i])
@@ -120,6 +120,23 @@ ADD-BINARY-INTERGERS(A, B, n)
 # Exercises 2.2
 
 ## 2.2-1
+Consider:
+```math
+\frac{n^3}{1000}+100n^2-100n+3
+```
+Isolate the dominant term:
+```math
+\frac{n^3}{1000}
+```
+Remove the coefficient:
+```math 
+n^3
+```
+This reveals that the order of growth in $\Theta$-notation is:
+```math
+\Theta(n^3)
+```
+Thus, the equation is roughly proportional to $n^3$ when $n$ is large.
 
 ## 2.2-2
 
