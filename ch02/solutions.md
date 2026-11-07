@@ -120,7 +120,7 @@ ADD-BINARY-INTERGERS(A, B, n)
 # Exercises 2.2
 
 ## 2.2-1
-Consider:
+Consider the expression:
 ```math
 \frac{n^3}{1000}+100n^2-100n+3
 ```
@@ -136,7 +136,7 @@ This reveals that the order of growth in $\Theta$-notation is:
 ```math
 \Theta(n^3)
 ```
-Thus, the equation is roughly proportional to $n^3$ when $n$ is large.
+Thus, the expression is roughly proportional to $n^3$ when $n$ is large.
 
 ## 2.2-2
 
