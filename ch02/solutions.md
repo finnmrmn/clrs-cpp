@@ -143,7 +143,7 @@ Thus, the expression is roughly proportional to $n^3$ when $n$ is large.
 SELECTION-SORT(A, n)
     for i = 1 to n - 1
         key_index = i
-        for j = i to n
+        for j = i + 1 to n
             if A[j] < A[key_index]
                 key_index = j
         temp = A[i]
