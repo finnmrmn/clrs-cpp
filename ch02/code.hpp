@@ -19,3 +19,17 @@ void insertion_sort(std::vector<T>& v) {
         v[j] = key;
     }
 }
+
+template <typename T>
+void selection_sort(std::vector<T>& v) {
+    for (size_t i = 0; i < v.size() - 1; i++) {
+        size_t key_index = i;
+        for (size_t j = i; i < v.size(); i++) {
+            if (v[j] < v[key_index])
+                key_index = j;
+        }
+        T temp = v[i];
+        v[i] = v[key_index];
+        v[key_index] = temp;
+    }
+}

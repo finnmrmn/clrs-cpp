@@ -141,7 +141,14 @@ Thus, the expression is roughly proportional to $n^3$ when $n$ is large.
 ## 2.2-2
 ```text
 SELECTION-SORT(A, n)
-    
+    for i = 1 to n - 1
+        key_index = i
+        for j = i to n
+            if A[j] < A[key_index]
+                key_index = j
+        temp = A[i]
+        A[i] = A[key_index]
+        A[key_index] = temp
 ```
 
 ## 2.2-3
