@@ -151,6 +151,29 @@ SELECTION-SORT(A, n)
         A[key_index] = temp
 ```
 
+### Loop Invariant
+The subarray from $1$ to $i-1$, whre $0<i<n$ is sorted from least to greatest 
+before each loop iteration, and any element from $i$ to $n$ is greater than any
+element in the subarray.
+```math
+A[1:i-1]\text{ is monotonically increasing}\\
+\text{and } \forall x\in A[1:i-1],\forall y\in A[i:n], x\le y
+```
+
+### Why $n - 1$ Iterations?
+The algorithm terminates before $i=n$. However, if we take a look at what would
+happen if we applied iteration $n$ to the loop invariant, we would obtain:
+```math
+\begin{align*}
+&A[1:n-1]\text{ is monotonically increasing}\\
+&\forall x\in A[1:n-1], x\le A[n]\\
+&\therefore A[1:n]\text{ is monotonically increasing}
+\end{align*}
+```
+The whole array is already sorted after iteration $n-1$.
+
+### Worst-Case Running Time
+
 ## 2.2-3
 
 ## 2.2-4
