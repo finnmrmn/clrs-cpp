@@ -152,9 +152,9 @@ SELECTION-SORT(A, n)
 ```
 
 ### Loop Invariant
-The subarray from $1$ to $i-1$, whre $0<i<n$ is sorted from least to greatest 
-before each loop iteration, and any element from $i$ to $n$ is greater than any
-element in the subarray.
+The subarray from $1$ to $i-1$, where $1\le i\le n$, is sorted from least to 
+greatest before each loop iteration, and any element from $i$ to $n$ is greater
+than any element in the subarray.
 ```math
 A[1:i-1]\text{ is monotonically increasing}\\
 \text{and } \forall x\in A[1:i-1],\forall y\in A[i:n], x\le y
@@ -173,7 +173,77 @@ happen if we applied iteration $n$ to the loop invariant, we would obtain:
 The whole array is already sorted after iteration $n-1$.
 
 ### Worst-Case Running Time
-
+```math
+T(n) 
+= c_1n 
++ c_2(n-1) 
++ c_3\sum_{i=1}^{n-1}(t_i+1)
++ c_4\sum_{i=1}^{n-1}t_i
++ c_5\sum_{i=1}^{n-1}t_i
++ c_6(n-1)
++ c_7(n-1)
++ c_8(n-1)
+```
+The number of times each line in the inner loop is executed depends on the outer
+loop. That is to say the $i$-th iteration of the outer loop causes the inner
+loop to execute $n-i$ times. This gives us $t_i=n-i$.
+```math
+T(n) 
+= c_1n 
++ c_2(n-1) 
++ c_3\sum_{i=1}^{n-1}(n-i+1)
++ c_4\sum_{i=1}^{n-1}(n-i)
++ c_5\sum_{i=1}^{n-1}(n-i)
++ c_6(n-1)
++ c_7(n-1)
++ c_8(n-1)
+```
+Group the terms to find the dominant term.
+```math
+\begin{align*}
+T(n) 
+&= c_1n 
++ (c_2+c_6+c_7+c_8)(n-1) 
++ c_3\sum_{i=1}^{n-1}(n-i)
++ c_3\sum_{i=1}^{n-1}(1)
++ c_4\sum_{i=1}^{n-1}(n-i)
++ c_5\sum_{i=1}^{n-1}(n-i)\\
+&= c_1n 
++ (c_2+c_6+c_7+c_8)(n-1) 
++ (c_3+c_4+c_5)\sum_{i=1}^{n-1}(n-i)
++ c_3\sum_{i=1}^{n-1}(1)\\
+&= (c_1+c_2+c_6+c_7+c_8)n
++ (c_3+c_4+c_5)\sum_{i=1}^{n-1}(n-i)
++ c_3\sum_{i=1}^{n-1}(1) - (c_2+c_6+c_7+c_8)\\
+&= (c_3+c_4+c_5)\frac{n(n-1)}{2}
++ (c_1+c_2+c_3+c_6+c_7+c_8)n
+- (c_2+c_3+c_6+c_7+c_8)\\
+&= \frac{c_3+c_4+c_5}{2}(n^2-n)
++ (c_1+c_2+c_3+c_6+c_7+c_8)n
+- (c_2+c_3+c_6+c_7+c_8)\\
+&= \frac{c_3+c_4+c_5}{2}n^2-\frac{c_3+c_4+c_5}{2}n
++ (c_1+c_2+c_3+c_6+c_7+c_8)n
+- (c_2+c_3+c_6+c_7+c_8)\\
+&= \frac{c_3+c_4+c_5}{2}n^2
++ (c_1+c_2+c_3+c_6+c_7+c_8-\frac{c_3+c_4+c_5}{2})n
+- (c_2+c_3+c_6+c_7+c_8)\\
+\therefore T(n)&\in\Theta(n^2)
+\end{align*}
+```
+### Best-case running time faster?
+Consider the dominant term.
+```math
+\frac{c_3+c_4+c_5}{2}n^2
+```
+The only difference with the best-case running time is eliminating the step that
+replaces the key index. This effectively means $c_5=0$, but this does not
+eliminate the $n^2$ term altogether. 
+```math
+\frac{c_3+c_4}{2}n^2
+```
+Therefore, the best and worst cases are roughly proportional to
+$n^2$ when $n$ is large. The best-case running time is negligibly faster than
+the worst-case running time.
 ## 2.2-3
 
 ## 2.2-4
