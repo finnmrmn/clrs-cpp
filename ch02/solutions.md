@@ -244,7 +244,45 @@ eliminate the $n^2$ term altogether.
 Therefore, the best and worst cases are roughly proportional to
 $n^2$ when $n$ is large. The best-case running time is negligibly faster than
 the worst-case running time.
+
 ## 2.2-3
+Let us consider the average, best, and worst cases for linear search.
+
+### Average Case
+Checking the $i$-th element involves checking $i$ elements. This means the total
+checks needed for all elements is:
+```math
+\sum_{i=1}^{n}i=\frac{n(n+1)}{2}
+```
+The average number of checks is then:
+```math
+T(n)=\frac{\frac{n(n+1)}{2}}{n}=\frac{n+1}{2}
+```
+```math
+\implies T(n)\in\Theta(n)
+```
+
+### Worst Case
+All $n$ elements must be checked.
+```math
+T(n)=n
+```
+```math
+\implies T(n)\in\Theta(n)
+```
+
+### Best Case (Extra)
+The first element checked is the element being searched for.
+```math
+T(n)=1
+```
+```math
+\implies T(n)\in\Theta(1)
+```
+
+### Comparison
+The worst and average cases fall into the same set of functions. However, the
+best case instantly returns in constant time.
 
 ## 2.2-4
 All sorting algorithms could first perform an already-sorted check to determine 
