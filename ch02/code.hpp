@@ -21,8 +21,9 @@ void insertion_sort(std::vector<T>& v) {
 }
 
 /// @brief Sorts a vector in place using selection sort.
-/// @note 'n - 1' overflows with size_t, so 'i < n - 1' becomes 'i + 1 < n' (add
-/// 1 to both sides) to prevent the overflow from happening.
+/// @note 'n - 1' underflows for size_t when the size of the array is zero, so
+/// 'i < n - 1' becomes 'i + 1 < n' (add 1 to both sides) to prevent the
+/// underflow from happening.
 template <typename T>
 void selection_sort(std::vector<T>& v) {
     for (size_t i = 0; i + 1 < v.size(); i++) {
