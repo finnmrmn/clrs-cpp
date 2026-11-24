@@ -11,6 +11,6 @@ exercises and problems.
 Generative AI was used for learning purposes, like generating feedback, Markdown 
 formatting, etc. This is used to refine and improve answers.
 
-An acknoledgement and justification of usage is provided for every task that 
+An acknowledgement and justification of usage is provided for every task that 
 directly copies generative AI output to assist the completion. This is used to 
 avoid wasting time on things that have little learning impact.
